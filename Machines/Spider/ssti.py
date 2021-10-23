@@ -31,9 +31,6 @@ def main():
         print(r.text)
         sys.exit()
 
-    uuid = re.search(
-        r'<input type="text" name="username" value="(.*?)" />', r.text).group(1)
-
     s.post('http://spider.htb/login',
            data={'username': uuid, 'password': password})
     r = s.get('http://spider.htb/user')
