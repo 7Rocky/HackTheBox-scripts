@@ -14,7 +14,7 @@ iso.3.6.1.4.1.11.2.3.9.1.1.13.0 = BITS: 50 40 73 73 77 30 72 64 40 31 32 33 21 2
 
 We import `binascii` library to use `unhexlify` function for decoding. As we don't know if the whole stream of digits will decode correctly, we wrap the decoding process using a `try`-`except` block.
 
-Notice that `unhexlify` returns a `bytes` object, so we need to transforme it to `str` using the `decode` function:
+Notice that `unhexlify` returns a `bytes` object, so we need to transform it to `str` using the `decode` function:
 
 ```python
     try:
