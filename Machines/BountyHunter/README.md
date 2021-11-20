@@ -155,7 +155,7 @@ ff02::2 ip6-allrouters
 </table>
 ```
 
-However, if we need to retrieve a PHP file, it will be executed and thus not printed. To avoid this, we can make use of a PHP wrapper to encode the content in Base64 (`php://filter/convert.base64-encode/resource=`) as follows:
+However, if we need to retrieve a PHP file, it will not be printed because it contains special characters for XML (such as `<` and `>`). To avoid this, we can make use of a PHP wrapper to encode the content in Base64 (`php://filter/convert.base64-encode/resource=`) as follows:
 
 ```console
 $ echo "<?xml version=\"1.0\"?>
@@ -228,7 +228,7 @@ echo PGh0bWw+CjxoZWFkPgo8c2NyaXB0IHNyYz0iL3Jlc291cmNlcy9qcXVlcnkubWluLmpzIj48L3N
 </html>
 ```
 
-To automate this, we can create a Bas script that takes the filename as a parameter and puts it inside the XML document and encodes it in Base64 (and making it URL safe). Finally, the POST request is performed using `curl`, as in the examples, and saved to a variable called `res`:
+To automate this, we can create a Bash script that takes the filename as a parameter and puts it inside the XML document and encodes it in Base64 (and making it URL safe). Finally, the POST request is performed using `curl`, as in the examples, and saved to a variable called `res`:
 
 ```bash
 file=$1
