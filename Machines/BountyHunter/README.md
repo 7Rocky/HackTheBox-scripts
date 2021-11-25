@@ -1,6 +1,6 @@
 # Hack The Box. Machines. BountyHunter
 
-Machine write-up: https://7rocky.netlify.app/en/htb/bountyhunter
+Machine write-up: https://7rocky.github.io/en/htb/bountyhunter
 
 ### `xxe.sh`
 
