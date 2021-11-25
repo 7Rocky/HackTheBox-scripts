@@ -1,6 +1,6 @@
 # Hack The Box. Machines. Monitors
 
-Machine write-up: https://7rocky.netlify.app/en/htb/monitors
+Machine write-up: https://7rocky.github.io/en/htb/monitors
 
 ### `deserialization.sh`
 
