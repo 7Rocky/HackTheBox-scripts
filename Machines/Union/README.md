@@ -1,6 +1,6 @@
 # Hack The Box. Machines. Union
 
-Machine write-up: https://7rocky.netlify.app/en/htb/union
+Machine write-up: https://7rocky.github.io/en/htb/union
 
 ### `UnionSQLi.java`
 
