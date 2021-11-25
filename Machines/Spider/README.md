@@ -1,6 +1,6 @@
 # Hack The Box. Machines. Spider
 
-Machine write-up: https://7rocky.netlify.app/en/htb/spider
+Machine write-up: https://7rocky.github.io/en/htb/spider
 
 ### `ssti.py`
 
