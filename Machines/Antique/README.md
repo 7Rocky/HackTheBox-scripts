@@ -1,6 +1,6 @@
 # Hack The Box. Machines. Antique
 
-Machine write-up: https://7rocky.netlify.app/en/htb/antique
+Machine write-up: https://7rocky.github.io/en/htb/antique
 
 ### `decode.py`
 
