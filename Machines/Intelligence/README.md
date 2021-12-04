@@ -74,7 +74,7 @@ func main() {
 }
 ```
 
-To merge all these functions and add concurrency to the program, we can make use of `go` functions and the `sync` package. The number of threads has been set to `50`. As a result, all requests ($12 \cdot 31 = 372$) are done at the same time and the downloading process will be shorter:
+To merge all these functions and add concurrency to the program, we can make use of `go` functions and the `sync` package. The number of threads has been set to `50`. As a result, all requests (12 · 31 = 372) are done at the same time and the downloading process will be shorter:
 
 ```console
 $ go run reqPdf.go
