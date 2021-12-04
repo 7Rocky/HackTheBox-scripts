@@ -195,3 +195,5 @@ $ python3 autopwn.py 10.10.17.44
 [*] Switching to interactive mode
 root@pikaboo:/srv/ftp/abilities#
 ```
+
+**Note:** The previous code snippets are shown only as an explanation, the complete source code is a bit different due to global variables and the imported libraries.
