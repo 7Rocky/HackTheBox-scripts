@@ -75,7 +75,7 @@ def listen_for_shell(timeout: int = 20):
     shell = listen(lport, timeout=timeout).wait_for_connection()
 
     if shell.sock is None:
-        log.error(f'Could not to connect to {rhost}')
+        log.error(f'Could not connect to {rhost}')
 
     return shell
 ```
