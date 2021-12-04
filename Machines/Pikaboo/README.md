@@ -136,7 +136,7 @@ def ldap_search(shell, user: str, ldap_user: str, ldap_password: str) -> str:
     return b64d(ftp_password_enc[0]).decode()
 ```
 
-Finally, we perform a command injection into a Cron task exploiting a Perl open argument injection vulnerability.
+Finally, we perform a command injection into a Cron job exploiting a Perl open argument injection vulnerability.
 
 To make this action work, the file must be crafted in a singular way and uploaded to a directory inside `/srv/ftp`. And this task must be done using Python's `ftplib` library and instructions (find library documentation [here](https://docs.python.org/3/library/ftplib.html)).
 
@@ -175,7 +175,7 @@ def root_flag(shell):
     log.warning(f'Found root.txt: {root_txt}')
 ```
 
-Finally, we can execute the _script_ and compromise the machine with just one click:
+Finally, we can execute the script and compromise the machine with just one click:
 
 ```console
 $ python3 autopwn.py 10.10.17.44
