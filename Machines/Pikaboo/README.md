@@ -4,7 +4,7 @@ Machine write-up: https://7rocky.github.io/en/htb/pikaboo
 
 ### `autopwn.py`
 
-This is a Python _script_ that automates all the steps needed to compromise the machine. These are the steps:
+This is a Python script that automates all the steps needed to compromise the machine. These are the steps:
 
 - Log poisoning
 - Shell as `www-data`
