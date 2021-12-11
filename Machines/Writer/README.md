@@ -222,9 +222,9 @@ TRUE
 SUCCESS: w
 ```
 
-The function uses a kind of Binary Search algorithm, which has `O(log n)` complexity, so it will be pretty faster than trying all characters in ASCII order (just compare the previous `7` requests using Binary Search to `119 - 32 + 1 = 88` requests needed to get a `w` if we used simple brute force).
+The function uses a kind of Binary Search algorithm, which has `O(log n)` complexity, so it will be pretty much faster than trying all characters in ASCII order (just compare the previous `7` requests using Binary Search to `119 - 32 + 1 = 88` requests needed to get a `w` if we used simple brute force).
 
-Apart from dumping the database, we have a function `get_privilege` to see what privilege we have on the database:
+Apart from dumping the database, we have a function `get_privileges` to see what privileges we have on the database:
 
 ```python
 def get_privileges():
