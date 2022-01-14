@@ -1,0 +1,15 @@
+{
+  "author": "7Rocky",
+  "dependencies": {
+    "axios": "^0.24.0"
+  },
+  "description": "Obtain a reverse shell exploiting an insecure deserialization vulnerability",
+  "keywords": ["rce", "insecure deserialization", "node-serialize", "reverse shell", "node"],
+  "license": "ISC",
+  "main": "rce-serialize.js",
+  "name": "node-blog",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
