@@ -6,7 +6,7 @@
   "description": "Obtain a reverse shell exploiting an insecure deserialization vulnerability",
   "keywords": ["rce", "insecure deserialization", "node-serialize", "reverse shell", "node"],
   "license": "ISC",
-  "main": "rce-serialize.js",
+  "main": "unserialize_rce.js",
   "name": "node-blog",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

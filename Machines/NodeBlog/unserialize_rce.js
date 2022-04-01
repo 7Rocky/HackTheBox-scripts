@@ -32,7 +32,7 @@ const reverseShell = () =>
 
 const main = async () => {
   if (!lhost || !lport) {
-    console.log('[!] Usage: node serialize-rce.js <lhost> <lport>')
+    console.log('[!] Usage: node unserialize_rce.js <lhost> <lport>')
     process.exit()
   }
 
@@ -44,3 +44,4 @@ const main = async () => {
 }
 
 main()
+

