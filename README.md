@@ -2,7 +2,7 @@
 
 This repository is made to upload some custom interesting scripts in different programming languages that are useful to exploit certain vulnerabilities in Hack The Box retired machines/challenges.
 
-Detailed write-ups are posted on my personal blog: https://7rocky.github.io/en/htb
+Detailed write-ups are posted on my personal blog: https://7rocky.github.io/en/htb.
 
 For every machine/challenge, there is a `README.md` file that explains how the script is built, giving some reasons why and doing some troubleshooting if necessary.
 
@@ -14,6 +14,7 @@ Hope it is useful! :smile:
 | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Altered](Machines/Altered)           | [bf_pin.rb](Machines/Altered/bf_pin.rb)                                                                                                      | Ruby                      | Brute Force attack on a 4-digit PIN                                                                                                                                      |
 | [Antique](Machines/Antique)           | [decode.py](Machines/Antique/decode.py)                                                                                                      | Python                    | Decoding a password from SNMP                                                                                                                                            |
+| [Backdoor](Machines/Backdoor)         | [dpt.py](Machines/Backdoor/dpt.py)<br>[pwn_gdbserver.py](Machines/Backdoor/pwn_gdbserver.py)                                                 | Python<br>Python          | Read files using Diretory Path Traversal<br>Obtain a reverse shell via GNU gdbserver                                                                                     |
 | [BountyHunter](Machines/BountyHunter) | [xxe.sh](Machines/BountyHunter/xxe.sh)                                                                                                       | Bash                      | Read files using an XXE attack                                                                                                                                           |
 | [Forge](Machines/Forge)               | [ssrf.py](Machines/Forge/ssrf.py)                                                                                                            | Python                    | Automate a SSRF explotation through an URL                                                                                                                               |
 | [GoodGames](Machines/GoodGames)       | [autopwn.py](Machines/GoodGames/autopwn.py)                                                                                                  | Python                    | Compromise the machine from scratch to `root`                                                                                                                            |
