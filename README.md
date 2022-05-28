@@ -2,7 +2,7 @@
 
 This repository is made to upload some custom interesting scripts in different programming languages that are useful to exploit certain vulnerabilities in Hack The Box retired machines/challenges.
 
-Detailed write-ups are posted on my personal blog: https://7rocky.github.io/en/htb.
+Detailed write-ups are posted on my personal blog: https://7rocky.github.io/en/htb and https://7rocky.github.io/en/ctf/htb-challenges
 
 For every machine/challenge, there is a `README.md` file that explains how the script is built, giving some reasons why and doing some troubleshooting if necessary.
 
