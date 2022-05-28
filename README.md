@@ -30,6 +30,7 @@ Hope it is useful! :smile:
 | [Union](Machines/Union)               | [UnionSQLi.java](Machines/Union/UnionSQLi.java)                                                                                              | Java                      | Interactive prompt to make SQL queries using a Union-based SQLi                                                                                                          |
 | [Writer](Machines/Writer)             | [sqli.py](Machines/Writer/sqli.py)<br>[foothold.py](Machines/Writer/foothold.py)                                                             | Python<br>Python          | Dump database contents and read files using a Boolean-based SQLi<br>Obtain a reverse shell using a command injection via file upload                                     |
 
-| Challenge                         | Scripts / Programs                        | Language | Purpose                                                         |
-| --------------------------------- | ----------------------------------------- | -------- | --------------------------------------------------------------- |
-| [Pwn/ropme](Challenges/Pwn/ropme) | [solve.py](Challenges/Pwn/ropme/solve.py) | Python   | Buffer Overflow. NX bypass (ROP). ASLR bypass (leaks). Ret2Libc |
+| Challenge                                               | Scripts / Programs                                 | Language | Purpose                                                         |
+| ------------------------------------------------------- | -------------------------------------------------- | -------- | --------------------------------------------------------------- |
+| [Pwn/ropme](Challenges/Pwn/ropme)                       | [solve.py](Challenges/Pwn/ropme/solve.py)          | Python   | Buffer Overflow. NX bypass (ROP). ASLR bypass (leaks). Ret2Libc |
+| [Web/baby ninja jinja](Challenges/Pwn/baby ninja jinja) | [ssti.py](Challenges/Pwn/baby ninja jinja/ssti.py) | Python   | SSTI. RCE. Limited interactive shell session                    |
