@@ -2,7 +2,7 @@
 
 Machine write-up: https://7rocky.github.io/en/htb/timing
 
-### `foothold.py`
+### `upload.py`
 
 The purpose of this script is to upload a PHP web shell. For that, we need to access with credentials `aaron:aaron`, modify its role to be `admin` (abusing Type Juggling) and then upload the file. Finally, we need to compute the filename using the same procedure that the server uses.
 
@@ -54,7 +54,7 @@ As there can be some timing delays between request and response, I use some offs
 And that's it. Once the file is found, we can start using the web shell (exploiting a Local File Inclusion vulnerability that exists in the server) in the browser, using `curl` or whatever:
 
 ```console
-$ python3 foothold.py
+$ python3 upload.py
 Cookie: PHPSESSID=dg8sokd2ki84a93ggp2tttrlm6
 RCE: http://10.10.11.135/images/uploads/67bcd57488a373e2873212f23c06c222_r.php.jpg
 
