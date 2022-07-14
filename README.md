@@ -33,6 +33,7 @@ Hope it is useful! :smile:
 
 | Challenge                                                                                   | Scripts / Programs                                                         | Language | Purpose                                                         |
 | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------- | --------------------------------------------------------------- |
+| [Crypto/Down the Rabinhole](Challenges/Crypto/Down%20the%20Rabinhole)                       | [solve.py](Challenges/Crypto/Down%20the%20Rabinhole/solve.py)              | Python   | GCD. Modular arithmetic. Padding                                |
 | [Crypto/How The Columns Have Turned](Challenges/Crypto/How%20The%20Columns%20Have%20Turned) | [solve.py](Challenges/Crypto/How%20The%20Columns%20Have%20Turned/solve.py) | Python   | Reverse encryption algorithm                                    |
 | [Pwn/ropme](Challenges/Pwn/ropme)                                                           | [solve.py](Challenges/Pwn/ropme/solve.py)                                  | Python   | Buffer Overflow. NX bypass (ROP). ASLR bypass (leaks). Ret2Libc |
 | [Web/baby ninja jinja](Challenges/Web/baby%20ninja%20jinja)                                 | [ssti.py](Challenges/Web/baby%20ninja%20jinja/ssti.py)                     | Python   | SSTI. RCE. Limited interactive shell session                    |
