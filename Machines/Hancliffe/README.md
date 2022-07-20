@@ -76,4 +76,4 @@ $ echo $chars; ./encrypt2 "$chars"
 
 ### `exploit.py`
 
-The [write-up](https://7rocky.github.io/en/htb/hancliffe) provides all the explanation for this script.
+The [write-up](https://7rocky.github.io/en/htb/hancliffe/#privilege-escalation-exploiting-buffer-overflow) provides all the explanation for this script.
