@@ -60,6 +60,8 @@ Hope it is useful! :smile:
 
 | Pwn                                                                           | Scripts / Programs                                                   | Language | Purpose                                                         |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------- | -------- | --------------------------------------------------------------- |
+| [Blacksmith](Challenges/Pwn/blacksmith)                                       | [solve.py](Challenges/Pwn/blacksmith/solve.py)                       | Python   | `seccomp` rules. open-read-write shellcode                      |
+| [Fleet Management](Challenges/Pwn/Fleet%20Management)                         | [solve.py](Challenges/Pwn/Fleet%20Management/solve.py)               | Python   | `seccomp` rules. Custom shellcode                               |
 | [ropme](Challenges/Pwn/ropme)                                                 | [solve.py](Challenges/Pwn/ropme/solve.py)                            | Python   | Buffer Overflow. NX bypass (ROP). ASLR bypass (leaks). Ret2Libc |
 | [Space pirate: Going Deeper](Challenges/Pwn/Space%20pirate:%20Going%20Deeper) | [solve.py](Challenges/Pwn/Space%20pirate:%20Going%20Deeper/solve.py) | Python   | Buffer Overflow. One byte overflow                              |
 | [Vault-breaker](Challenges/Pwn/Vault-breaker)                                 | [solve.py](Challenges/Pwn/Vault-breaker/solve.py)                    | Python   | Bug abuse. XOR cipher                                           |
