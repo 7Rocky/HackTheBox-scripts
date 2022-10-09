@@ -42,16 +42,18 @@ Hope it is useful! :smile:
 
 ## Challenges
 
-| Crypto                                                                               | Scripts / Programs                                                         | Language | Purpose                                     |
-| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- | -------- | ------------------------------------------- |
-| [Android-in-the-Middle](Challenges/Crypto/Android-in-the-Middle)                     | [solve.py](Challenges/Crypto/Android-in-the-Middle/solve.py)               | Python   | Diffie-Hellman. MITM                        |
-| [Down the Rabinhole](Challenges/Crypto/Down%20the%20Rabinhole)                       | [solve.py](Challenges/Crypto/Down%20the%20Rabinhole/solve.py)              | Python   | GCD. Modular arithmetic. Padding            |
-| [How The Columns Have Turned](Challenges/Crypto/How%20The%20Columns%20Have%20Turned) | [solve.py](Challenges/Crypto/How%20The%20Columns%20Have%20Turned/solve.py) | Python   | Reverse encryption algorithm                |
-| [Infinite Descent](Challenges/Crypto/Infinite%20Descent)                             | [solve.py](Challenges/Crypto/Infinite%20Descent/solve.py)                  | Python   | RSA. Close primes. PRNG                     |
-| [Jenny From The Block](Challenges/Crypto/Jenny%20From%20The%20Block)                 | [solve.py](Challenges/Crypto/Jenny%20From%20The%20Block/solve.py)          | Python   | Block cipher. SHA256                        |
-| [One Step Closer](Challenges/Crypto/One%20Step%20Closer)                             | [solve.sage](Challenges/Crypto/One%20Step%20Closer/solve.sage)             | SageMath | RSA. Franklin-Reiter related-message attack |
-| [Space Pirates](Challenges/Crypto/Space%20Pirates)                                   | [solve.py](Challenges/Crypto/Space%20Pirates/solve.py)                     | Python   | Shamir Secret Sharing. PRNG seed            |
-| [The Three-Eyed Oracle](Challenges/Crypto/The%20Three-Eyed%20Oracle)                 | [solve.py](Challenges/Crypto/The%20Three-Eyed%20Oracle/solve.py)           | Python   | AES ECB oracle                              |
+| Crypto                                                                               | Scripts / Programs                                                         | Language | Purpose                                                        |
+| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------- | -------- | -------------------------------------------------------------- |
+| [Android-in-the-Middle](Challenges/Crypto/Android-in-the-Middle)                     | [solve.py](Challenges/Crypto/Android-in-the-Middle/solve.py)               | Python   | Diffie-Hellman. MITM                                           |
+| [BBGun06](Challenges/Crypto/BBGun06)                                                 | [solve.py](Challenges/Crypto/BBGun06/solve.py)                             | Python   | RSA. Forge signature. Regular Expression bypass                |
+| [Down the Rabinhole](Challenges/Crypto/Down%20the%20Rabinhole)                       | [solve.py](Challenges/Crypto/Down%20the%20Rabinhole/solve.py)              | Python   | GCD. Modular arithmetic. Padding                               |
+| [Hash the Filesystem](Challenges/Crypto/Hash%20the%20Filesystem)                     | [solve.py](Challenges/Crypto/Hash%20the%20Filesystem/solve.py)             | Python   | AES CTR. Inverse function of the Python built-in hash function |
+| [How The Columns Have Turned](Challenges/Crypto/How%20The%20Columns%20Have%20Turned) | [solve.py](Challenges/Crypto/How%20The%20Columns%20Have%20Turned/solve.py) | Python   | Reverse encryption algorithm                                   |
+| [Infinite Descent](Challenges/Crypto/Infinite%20Descent)                             | [solve.py](Challenges/Crypto/Infinite%20Descent/solve.py)                  | Python   | RSA. Close primes. PRNG                                        |
+| [Jenny From The Block](Challenges/Crypto/Jenny%20From%20The%20Block)                 | [solve.py](Challenges/Crypto/Jenny%20From%20The%20Block/solve.py)          | Python   | Block cipher. SHA256                                           |
+| [One Step Closer](Challenges/Crypto/One%20Step%20Closer)                             | [solve.sage](Challenges/Crypto/One%20Step%20Closer/solve.sage)             | SageMath | RSA. Franklin-Reiter related-message attack                    |
+| [Space Pirates](Challenges/Crypto/Space%20Pirates)                                   | [solve.py](Challenges/Crypto/Space%20Pirates/solve.py)                     | Python   | Shamir Secret Sharing. PRNG seed                               |
+| [The Three-Eyed Oracle](Challenges/Crypto/The%20Three-Eyed%20Oracle)                 | [solve.py](Challenges/Crypto/The%20Three-Eyed%20Oracle/solve.py)           | Python   | AES ECB oracle                                                 |
 
 | Misc                                                             | Scripts / Programs                                                                                                               | Language       | Purpose                                                      |
 | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------ |
