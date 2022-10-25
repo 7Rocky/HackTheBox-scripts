@@ -69,7 +69,6 @@ Hope it is useful! :smile:
 | [Format](Challenges/Pwn/Format)                                               | [solve.py](Challenges/Pwn/Format/solve.py)                           | Python   | Format String exploitation                                      |
 | [HTB Console](Challenges/Pwn/HTB%20Console)                                   | [solve.py](Challenges/Pwn/HTB%20Console/solve.py)                    | Python   | Buffer Overflow. Ret2Libc                                       |
 | [Leet Test](Challenges/Pwn/Leet%20Test)                                       | [solve.py](Challenges/Pwn/Leet%20Test/solve.py)                      | Python   | Format String exploitation                                      |
-| [ropme](Challenges/Pwn/ropme)                                                 | [solve.py](Challenges/Pwn/ropme/solve.py)                            | Python   | Buffer Overflow. NX bypass (ROP). ASLR bypass (leaks). Ret2Libc |
 | [Space pirate: Going Deeper](Challenges/Pwn/Space%20pirate:%20Going%20Deeper) | [solve.py](Challenges/Pwn/Space%20pirate:%20Going%20Deeper/solve.py) | Python   | Buffer Overflow. One byte overflow                              |
 | [Vault-breaker](Challenges/Pwn/Vault-breaker)                                 | [solve.py](Challenges/Pwn/Vault-breaker/solve.py)                    | Python   | Bug abuse. XOR cipher                                           |
 
