@@ -71,8 +71,8 @@ Hope it is useful! :smile:
 | [Bat Computer](Challenges/Pwn/Bat%20Computer)                                 | [solve.py](Challenges/Pwn/Bat%20Computer/solve.py)                   | Python   | Buffer Overflow. Shellcode                                         |
 | [Blacksmith](Challenges/Pwn/Blacksmith)                                       | [solve.py](Challenges/Pwn/Blacksmith/solve.py)                       | Python   | `seccomp` rules. open-read-write shellcode                         |
 | [CRSid](Challenges/Pwn/CRSid)                                                 | [solve.py](Challenges/Pwn/CRSid/solve.py)                            | Python   | Safe-linking. Out-of-bounds write. Tcache poisoning. Exit handlers |
-| [Entity](Challenges/Pwn/Entity)                                               | [solve.py](Challenges/Pwn/Entity/solve.py)                           | Python   | 64-bit binary. Union structure. Type confusion                     |
-| [Finale](Challenges/Pwn/Finale)                                               | [solve.py](Challenges/Pwn/Finale/solve.py)                           | Python   | 64-bit binary. open-read-write ROP chain                           |
+| [Entity](Challenges/Pwn/Entity)                                               | [solve.py](Challenges/Pwn/Entity/solve.py)                           | Python   | Union structure. Type confusion                                    |
+| [Finale](Challenges/Pwn/Finale)                                               | [solve.py](Challenges/Pwn/Finale/solve.py)                           | Python   | open-read-write ROP chain                                          |
 | [Fleet Management](Challenges/Pwn/Fleet%20Management)                         | [solve.py](Challenges/Pwn/Fleet%20Management/solve.py)               | Python   | `seccomp` rules. Custom shellcode                                  |
 | [Format](Challenges/Pwn/Format)                                               | [solve.py](Challenges/Pwn/Format/solve.py)                           | Python   | Format String exploitation                                         |
 | [HTB Console](Challenges/Pwn/HTB%20Console)                                   | [solve.py](Challenges/Pwn/HTB%20Console/solve.py)                    | Python   | Buffer Overflow. Ret2Libc                                          |
@@ -80,7 +80,7 @@ Hope it is useful! :smile:
 | [Nightmare](Challenges/Pwn/Nightmare)                                         | [solve.py](Challenges/Pwn/Nightmare/solve.py)                        | Python   | Format String exploitation. GOT overwrite                          |
 | [No Return](Challenges/Pwn/No%20Return)                                       | [solve.py](Challenges/Pwn/No%20Return/solve.py)                      | Python   | JOP. sys_rt_sigreturn and sys_execve                               |
 | [Space pirate: Going Deeper](Challenges/Pwn/Space%20pirate:%20Going%20Deeper) | [solve.py](Challenges/Pwn/Space%20pirate:%20Going%20Deeper/solve.py) | Python   | Buffer Overflow. One byte overflow                                 |
-| [Spooky Time](Challenges/Pwn/Spooky%20Time)                                   | [solve.py](Challenges/Pwn/Spooky%20Time/solve.py)                    | Python   | 64-bit binary. Format String vulnerability. GOT overwrite          |
+| [Spooky Time](Challenges/Pwn/Spooky%20Time)                                   | [solve.py](Challenges/Pwn/Spooky%20Time/solve.py)                    | Python   | Format String vulnerability. GOT overwrite                         |
 | [Vault-breaker](Challenges/Pwn/Vault-breaker)                                 | [solve.py](Challenges/Pwn/Vault-breaker/solve.py)                    | Python   | Bug abuse. XOR cipher                                              |
 
 | Reversing                                     | Scripts / Programs                                   | Language | Purpose                           |
