@@ -57,6 +57,10 @@ Hope it is useful! :smile:
 | [Space Pirates](Challenges/Crypto/Space%20Pirates)                                   | [solve.py](Challenges/Crypto/Space%20Pirates/solve.py)                     | Python   | Shamir Secret Sharing. PRNG seed                               |
 | [The Three-Eyed Oracle](Challenges/Crypto/The%20Three-Eyed%20Oracle)                 | [solve.py](Challenges/Crypto/The%20Three-Eyed%20Oracle/solve.py)           | Python   | AES ECB oracle                                                 |
 
+| Forensics                                                           | Scripts / Programs                                               | Language | Purpose                                   |
+| ------------------------------------------------------------------- | ---------------------------------------------------------------- | -------- | ----------------------------------------- |
+| [Halloween Invitation](Challenges/Forensics/Halloween%20Invitation) | [solve.py](Challenges/Forensics/Halloween%20Invitation/solve.py) | Python   | Microsoft Office VBA macros deobfuscation |
+
 | Misc                                                             | Scripts / Programs                                                                                                               | Language       | Purpose                                                      |
 | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------ |
 | [Emdee five for life](Challenges/Misc/Emdee%20five%20for%20life) | [solve.py](Challenges/Misc/Emdee%20five%20for%20life/solve.py)<br>[solve.sh](Challenges/Misc/Emdee%20five%20for%20life/solve.sh) | Python<br>Bash | Compute and send MD5 hash of a string as quickly as possible |
