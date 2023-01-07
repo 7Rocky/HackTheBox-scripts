@@ -152,7 +152,7 @@ This hash is composed of three parts (divided by `$`), which is parsed in the sc
 	fmt.Printf("[*] Hash: \t %s\n\n", hash)
 ```
 
-Once done, we open the wordlist file and begin computing hashes using the same algorithm and salt until we find a coincidende:
+Once done, we open the wordlist file and begin computing hashes using the same algorithm and salt until we find a coincidence:
 
 ```go
 	file, err := os.Open(os.Args[1])
