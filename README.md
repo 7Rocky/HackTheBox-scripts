@@ -71,6 +71,10 @@ Hope it is useful! :smile:
 | [ExploitedStream](Challenges/Misc/ExploitedStream)               | [solve.js](Challenges/Misc/ExploitedStream/solve.js)                                                                             | Node.js        | Brute force package name to decrypt AES                      |
 | [Insane Bolt](Challenges/Misc/Insane%20Bolt)                     | [solve.py](Challenges/Misc/Insane%20Bolt/solve.py)                                                                               | Python         | Depth First Search (DFS)                                     |
 
+| OSINT                                       | Scripts / Programs                                    | Language | Purpose                                                                              |
+| ------------------------------------------- | ----------------------------------------------------- | -------- | ------------------------------------------------------------------------------------ |
+| [Monstrosity](Challenges/OSINT/Monstrosity) | [analyze.py](Challenges/OSINT/Monstrosity/analyze.py) | Python   | Use Twitter's API to extract coordinates from tweets and plot them with `matplotlib` |
+
 | Pwn                                                                           | Scripts / Programs                                                                                                           | Language | Purpose                                                                               |
 | ----------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------- |
 | [Bat Computer](Challenges/Pwn/Bat%20Computer)                                 | [solve.py](Challenges/Pwn/Bat%20Computer/solve.py)                                                                           | Python   | Buffer Overflow. Shellcode                                                            |
