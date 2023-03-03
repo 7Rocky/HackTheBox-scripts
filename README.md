@@ -69,6 +69,7 @@ Hope it is useful! :smile:
 
 | Forensics                                                           | Scripts / Programs                                               | Language | Purpose                                   |
 | ------------------------------------------------------------------- | ---------------------------------------------------------------- | -------- | ----------------------------------------- |
+| [Deadly Arthropod](Challenges/Forensics/Deadly%20Arthropod)         | [solve.py](Challenges/Forensics/Deadly%20Arthropod/solve.py)     | Python   | USB HID key strokes parser                |
 | [Halloween Invitation](Challenges/Forensics/Halloween%20Invitation) | [solve.py](Challenges/Forensics/Halloween%20Invitation/solve.py) | Python   | Microsoft Office VBA macros deobfuscation |
 
 | Misc                                                             | Scripts / Programs                                                                                                               | Language       | Purpose                                                      |
