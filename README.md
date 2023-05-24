@@ -92,6 +92,7 @@ Hope it is useful! :smile:
 | [Eternal Loop](Challenges/Misc/Eternal%20Loop)                   | [solve.go](Challenges/Misc/Eternal%20Loop/solve.go)                                                                              | Go             | Uncompress ZIP archives indefinitely                         |
 | [ExploitedStream](Challenges/Misc/ExploitedStream)               | [solve.js](Challenges/Misc/ExploitedStream/solve.js)                                                                             | Node.js        | Brute force package name to decrypt AES                      |
 | [Insane Bolt](Challenges/Misc/Insane%20Bolt)                     | [solve.py](Challenges/Misc/Insane%20Bolt/solve.py)                                                                               | Python         | Depth First Search (DFS)                                     |
+| [Type Exception](Challenges/Misc/Type%20Exception)               | [solve.py](Challenges/Misc/Type%20Exception/solve.py)                                                                            | Python         | Python jail. Oracle                                          |
 
 | OSINT                                       | Scripts / Programs                                    | Language | Purpose                                                                              |
 | ------------------------------------------- | ----------------------------------------------------- | -------- | ------------------------------------------------------------------------------------ |
