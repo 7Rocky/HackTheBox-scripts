@@ -134,10 +134,11 @@ Hope it is useful! :smile:
 | [Vault-breaker](Challenges/Pwn/Vault-breaker)                                 | [solve.py](Challenges/Pwn/Vault-breaker/solve.py)                                                                            | Python   | Bug abuse. XOR cipher                                                                                          |
 | [Void](Challenges/Pwn/Void)                                                   | [solve.py](Challenges/Pwn/Void/solve.py)                                                                                     | Python   | 64-bit binary. Buffer Overflow. ret2dlresolve                                                                  |
 
-| Reversing                                             | Scripts / Programs                                        | Language | Purpose                              |
-| ----------------------------------------------------- | --------------------------------------------------------- | -------- | ------------------------------------ |
-| [Potion Master](Challenges/Reversing/Potion%20Master) | [solve.py](Challenges/Reversing/Potion%20Master/solve.py) | Python   | `z3` solution to a set of conditions |
-| [Rebuilding](Challenges/Reversing/Rebuilding)         | [solve.py](Challenges/Reversing/Rebuilding/solve.py)      | Python   | Automate flag extraction from GDB    |
+| Reversing                                             | Scripts / Programs                                        | Language | Purpose                                                |
+| ----------------------------------------------------- | --------------------------------------------------------- | -------- | ------------------------------------------------------ |
+| [Potion Master](Challenges/Reversing/Potion%20Master) | [solve.py](Challenges/Reversing/Potion%20Master/solve.py) | Python   | `z3` solution to a set of conditions                   |
+| [Headache](Challenges/Reversing/Headache)             | [solve.py](Challenges/Reversing/Headache/solve.py)        | Python   | Bypass `sys_ptrace`. Automate flag extraction from GDB |
+| [Rebuilding](Challenges/Reversing/Rebuilding)         | [solve.py](Challenges/Reversing/Rebuilding/solve.py)      | Python   | Automate flag extraction from GDB                      |
 
 | Web                                                       | Scripts / Programs                                       | Language | Purpose                                                      |
 | --------------------------------------------------------- | -------------------------------------------------------- | -------- | ------------------------------------------------------------ |
