@@ -143,6 +143,7 @@ Hope it is useful! :smile:
 | [Potion Master](Challenges/Reversing/Potion%20Master) | [solve.py](Challenges/Reversing/Potion%20Master/solve.py) | Python   | `z3` solution to a set of conditions                   |
 | [Headache](Challenges/Reversing/Headache)             | [solve.py](Challenges/Reversing/Headache/solve.py)        | Python   | Bypass `sys_ptrace`. Automate flag extraction from GDB |
 | [Rebuilding](Challenges/Reversing/Rebuilding)         | [solve.py](Challenges/Reversing/Rebuilding/solve.py)      | Python   | Automate flag extraction from GDB                      |
+| [The Vault](Challenges/Reversing/The%20Vault)         | [solve.py](Challenges/Reversing/The%20Vault/solve.py)     | Python   | Automate flag extraction from GDB                      |
 
 | Web                                                       | Scripts / Programs                                       | Language | Purpose                                                      |
 | --------------------------------------------------------- | -------------------------------------------------------- | -------- | ------------------------------------------------------------ |
