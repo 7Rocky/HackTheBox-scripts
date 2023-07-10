@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from pwn import log, remote, sys
+from pwn import log, remote, string, sys
 
 
 def get_process():
@@ -17,7 +17,7 @@ def main():
 
     while '}' not in flag:
         for c in string.printable:
-            payload  = junk
+            payload = junk
             payload += (b'A' * 15 + flag.encode())[-15:] + c.encode()
             payload += b'A' * (15 - len(flag) % 16)
 
@@ -26,7 +26,7 @@ def main():
 
             b = len(flag) // 16
 
-            if ct[32:64] == ct[32 * (b + 2) : 32 * (b + 3)]:
+            if ct[32:64] == ct[32 * (b + 2): 32 * (b + 3)]:
                 flag += c
                 flag_progress.status(flag)
                 break
