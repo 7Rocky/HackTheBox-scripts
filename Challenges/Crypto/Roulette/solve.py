@@ -11,15 +11,13 @@ EVEN, ODD, NUMBER = 1, 2, 3
 N = 128
 M = 30
 b = 32
-
 MAGIC = 0xb249b015
-mask  = 0xffffffff
 
 target = 10000000000000
 rounds = 820
 
 F = GF(2)
-P = BooleanPolynomialRing(names=','.join(f'x{i}' for i in range(N * b)))
+P = BooleanPolynomialRing(names=','.join(f'y{i}' for i in range(N * b)))
 
 
 def get_process():
@@ -69,7 +67,8 @@ class VarTwister:
     def twist(self):
         for i in range(N):
             self.STATE[i] = xor(self.STATE[i], rol(self.STATE[(i + 1) % N], 3))
-            self.STATE[i] = xor(self.STATE[i], rol(self.STATE[(i + M) % N], b - 9))
+            self.STATE[i] = xor(self.STATE[i], rol(
+                self.STATE[(i + M) % N], b - 9))
             self.STATE[i] = xor(self.STATE[i], bits(MAGIC))
 
     def rand(self):
@@ -128,7 +127,8 @@ def main():
         io.failure('Failed to solve matrix equation')
         exit()
 
-    state = [sum(int(y_i) * 2 ** i for i, y_i in enumerate(S[k:k + b])) for k in range(0, N * b, b)]
+    state = [sum(int(y_i) * 2 ** i for i, y_i in enumerate(S[k:k + b]))
+             for k in range(0, N * b, b)]
     io.info('Got possible state bits')
 
     twister = Twister(state)
