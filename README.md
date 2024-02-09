@@ -158,4 +158,7 @@ Hope it is useful! :smile:
 | [AbuseHumanDB](Challenges/Web/AbuseHumanDB)               | [xss.py](Challenges/Web/AbuseHumanDB/solve.py)           | Python   | XSS. SOP bypass                                              |
 | [baby ninja jinja](Challenges/Web/baby%20ninja%20jinja)   | [ssti.py](Challenges/Web/baby%20ninja%20jinja/ssti.py)   | Python   | SSTI. RCE. Limited interactive shell session                 |
 | [BatchCraft Potions](Challenges/Web/BatchCraft%20Potions) | [solve.py](Challenges/Web/BatchCraft%20Potions/solve.py) | Python   | GraphQL batching attack. Send XSS and DOM Clobbering payload |
+| [E.Tree](Challenges/Web/E.Tree)                           | [solve.go](Challenges/Web/E.Tree/solve.go)               | Go       | XPATH injection. Automate flag extraction                    |
+| [emoji voting](Challenges/Web/emoji%20voting)             | [solve.js](Challenges/Web/emoji%20voting/solve.js)       | Node.js  | Boolean-based SQLi in `ORDER`. Automate flag extraction      |
 | [ExpressionalRebel](Challenges/Web/ExpressionalRebel)     | [redos.go](Challenges/Web/ExpressionalRebel/redos.go)    | Go       | SSRF. ReDoS. Find the flag back and forth                    |
+| [Wild Goose Hunt](Challenges/Web/Wild%20Goose%20Hunt)     | [solve.go](Challenges/Web/Wild%20Goose%20Hunt/solve.go)  | Go       | MongoDB. NoSQLi. Automate flag extraction                    |
