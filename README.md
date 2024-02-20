@@ -156,7 +156,7 @@ Hope it is useful! :smile:
 
 | Web                                                       | Scripts / Programs                                       | Language | Purpose                                                      |
 | --------------------------------------------------------- | -------------------------------------------------------- | -------- | ------------------------------------------------------------ |
-| [AbuseHumanDB](Challenges/Web/AbuseHumanDB)               | [xss.py](Challenges/Web/AbuseHumanDB/solve.py)           | Python   | XSS. SOP bypass                                              |
+| [AbuseHumanDB](Challenges/Web/AbuseHumanDB)               | [solve.py](Challenges/Web/AbuseHumanDB/solve.py)         | Python   | XSS. SOP bypass                                              |
 | [baby ninja jinja](Challenges/Web/baby%20ninja%20jinja)   | [ssti.py](Challenges/Web/baby%20ninja%20jinja/ssti.py)   | Python   | SSTI. RCE. Limited interactive shell session                 |
 | [BatchCraft Potions](Challenges/Web/BatchCraft%20Potions) | [solve.py](Challenges/Web/BatchCraft%20Potions/solve.py) | Python   | GraphQL batching attack. Send XSS and DOM Clobbering payload |
 | [E.Tree](Challenges/Web/E.Tree)                           | [solve.go](Challenges/Web/E.Tree/solve.go)               | Go       | XPATH injection. Automate flag extraction                    |
