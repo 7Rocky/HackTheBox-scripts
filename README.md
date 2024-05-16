@@ -167,12 +167,13 @@ Hope it is useful! :smile:
 | [The Vault](Challenges/Reversing/The%20Vault)         | [solve.py](Challenges/Reversing/The%20Vault/solve.py)         | Python   | Automate flag extraction from GDB                                           |
 | [Up a Stream](Challenges/Reversing/Up%20a%20Stream)   | [Solve.java](Challenges/Reversing/Up%20a%20Stream/Solve.java) | Java     | Reverse encryption algorithm using functional programming with Java streams |
 
-| Web                                                       | Scripts / Programs                                       | Language | Purpose                                                      |
-| --------------------------------------------------------- | -------------------------------------------------------- | -------- | ------------------------------------------------------------ |
-| [AbuseHumanDB](Challenges/Web/AbuseHumanDB)               | [solve.py](Challenges/Web/AbuseHumanDB/solve.py)         | Python   | XSS. SOP bypass                                              |
-| [baby ninja jinja](Challenges/Web/baby%20ninja%20jinja)   | [ssti.py](Challenges/Web/baby%20ninja%20jinja/ssti.py)   | Python   | SSTI. RCE. Limited interactive shell session                 |
-| [BatchCraft Potions](Challenges/Web/BatchCraft%20Potions) | [solve.py](Challenges/Web/BatchCraft%20Potions/solve.py) | Python   | GraphQL batching attack. Send XSS and DOM Clobbering payload |
-| [E.Tree](Challenges/Web/E.Tree)                           | [solve.go](Challenges/Web/E.Tree/solve.go)               | Go       | XPATH injection. Automate flag extraction                    |
-| [emoji voting](Challenges/Web/emoji%20voting)             | [solve.js](Challenges/Web/emoji%20voting/solve.js)       | Node.js  | Boolean-based SQLi in `ORDER`. Automate flag extraction      |
-| [ExpressionalRebel](Challenges/Web/ExpressionalRebel)     | [redos.go](Challenges/Web/ExpressionalRebel/redos.go)    | Go       | SSRF. ReDoS. Find the flag back and forth                    |
-| [Wild Goose Hunt](Challenges/Web/Wild%20Goose%20Hunt)     | [solve.go](Challenges/Web/Wild%20Goose%20Hunt/solve.go)  | Go       | MongoDB. NoSQLi. Automate flag extraction                    |
+| Web                                                       | Scripts / Programs                                       | Language | Purpose                                                                   |
+| --------------------------------------------------------- | -------------------------------------------------------- | -------- | ------------------------------------------------------------------------- |
+| [0xBOverchunked](Challenges/Web/0xBOverchunked)           | [solve.go](Challenges/Web/0xBOverchunked/solve.go)       | Go       | `Transfer-Encoding` chunked. Boolean-based SQLi. Automate flag extraction |
+| [AbuseHumanDB](Challenges/Web/AbuseHumanDB)               | [solve.py](Challenges/Web/AbuseHumanDB/solve.py)         | Python   | XSS. SOP bypass                                                           |
+| [baby ninja jinja](Challenges/Web/baby%20ninja%20jinja)   | [ssti.py](Challenges/Web/baby%20ninja%20jinja/ssti.py)   | Python   | SSTI. RCE. Limited interactive shell session                              |
+| [BatchCraft Potions](Challenges/Web/BatchCraft%20Potions) | [solve.py](Challenges/Web/BatchCraft%20Potions/solve.py) | Python   | GraphQL batching attack. Send XSS and DOM Clobbering payload              |
+| [E.Tree](Challenges/Web/E.Tree)                           | [solve.go](Challenges/Web/E.Tree/solve.go)               | Go       | XPATH injection. Automate flag extraction                                 |
+| [emoji voting](Challenges/Web/emoji%20voting)             | [solve.js](Challenges/Web/emoji%20voting/solve.js)       | Node.js  | Boolean-based SQLi in `ORDER`. Automate flag extraction                   |
+| [ExpressionalRebel](Challenges/Web/ExpressionalRebel)     | [redos.go](Challenges/Web/ExpressionalRebel/redos.go)    | Go       | SSRF. ReDoS. Find the flag back and forth                                 |
+| [Wild Goose Hunt](Challenges/Web/Wild%20Goose%20Hunt)     | [solve.go](Challenges/Web/Wild%20Goose%20Hunt/solve.go)  | Go       | MongoDB. NoSQLi. Automate flag extraction                                 |
