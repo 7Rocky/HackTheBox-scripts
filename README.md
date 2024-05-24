@@ -176,4 +176,5 @@ Hope it is useful! :smile:
 | [E.Tree](Challenges/Web/E.Tree)                           | [solve.go](Challenges/Web/E.Tree/solve.go)               | Go       | XPATH injection. Automate flag extraction                                 |
 | [emoji voting](Challenges/Web/emoji%20voting)             | [solve.js](Challenges/Web/emoji%20voting/solve.js)       | Node.js  | Boolean-based SQLi in `ORDER`. Automate flag extraction                   |
 | [ExpressionalRebel](Challenges/Web/ExpressionalRebel)     | [redos.go](Challenges/Web/ExpressionalRebel/redos.go)    | Go       | SSRF. ReDoS. Find the flag back and forth                                 |
+| [wafwaf](Challenges/Web/wafwaf)                           | [solve.js](Challenges/Web/wafwaf/solve.js)               | Node.js  | PHP. Time-based SQL injection. WAF bypass                                 |
 | [Wild Goose Hunt](Challenges/Web/Wild%20Goose%20Hunt)     | [solve.go](Challenges/Web/Wild%20Goose%20Hunt/solve.go)  | Go       | MongoDB. NoSQLi. Automate flag extraction                                 |
