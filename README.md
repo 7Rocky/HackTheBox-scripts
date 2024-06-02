@@ -103,6 +103,10 @@ Hope it is useful! :smile:
 | [Deadly Arthropod](Challenges/Forensics/Deadly%20Arthropod)         | [solve.py](Challenges/Forensics/Deadly%20Arthropod/solve.py)     | Python   | USB HID key strokes parser                |
 | [Halloween Invitation](Challenges/Forensics/Halloween%20Invitation) | [solve.py](Challenges/Forensics/Halloween%20Invitation/solve.py) | Python   | Microsoft Office VBA macros deobfuscation |
 
+| Hardware                         | Scripts / Programs                            | Language | Purpose                                                                 |
+| -------------------------------- | --------------------------------------------- | -------- | ----------------------------------------------------------------------- |
+| [HM74](Challenges/Hardware/HM74) | [solve.py](Challenges/Hardware/HM74/solve.py) | Python   | Noisy channel. Hamming codes. Statistically find correct message blocks |
+
 | Misc                                                             | Scripts / Programs                                                                                                               | Language       | Purpose                                                      |
 | ---------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------------ |
 | [Emdee five for life](Challenges/Misc/Emdee%20five%20for%20life) | [solve.py](Challenges/Misc/Emdee%20five%20for%20life/solve.py)<br>[solve.sh](Challenges/Misc/Emdee%20five%20for%20life/solve.sh) | Python<br>Bash | Compute and send MD5 hash of a string as quickly as possible |
@@ -111,6 +115,7 @@ Hope it is useful! :smile:
 | [Fentastic Moves](Challenges/Misc/Fentastic%20Moves)             | [solve.py](Challenges/Misc/Fentastic%20Moves/solve.py)                                                                           | Python         | Chess. FEN string. Stockfish                                 |
 | [Insane Bolt](Challenges/Misc/Insane%20Bolt)                     | [solve.py](Challenges/Misc/Insane%20Bolt/solve.py)                                                                               | Python         | Depth First Search (DFS)                                     |
 | [M0rsarchive](Challenges/Misc/M0rsarchive)                       | [solve.py](Challenges/Misc/M0rsarchive/solve.py)                                                                                 | Python         | Morse code. Computer vision. ZIP files. Automation           |
+| [Path of Survival](Challenges/Misc/Path%20of%20Survival)         | [solve.py](Challenges/Misc/Path%20of%20Survival/solve.py)                                                                        | Python         | Path-finding. Breadth-first Search. Dijkstra's algorithm     |
 | [Type Exception](Challenges/Misc/Type%20Exception)               | [solve.py](Challenges/Misc/Type%20Exception/solve.py)                                                                            | Python         | Python jail. Oracle                                          |
 
 | OSINT                                       | Scripts / Programs                                    | Language | Purpose                                                                              |
