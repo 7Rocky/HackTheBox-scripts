@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	pwn "github.com/7Rocky/pwntools"
+	pwn "github.com/7Rocky/gopwntools"
 )
 
 type path struct {
