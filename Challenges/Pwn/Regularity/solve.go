@@ -4,7 +4,7 @@ import (
 	"os"
 	"strings"
 
-	pwn "github.com/7Rocky/pwntools"
+	pwn "github.com/7Rocky/gopwntools"
 )
 
 func getProcess() *pwn.Conn {
