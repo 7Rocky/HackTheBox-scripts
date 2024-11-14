@@ -6,7 +6,7 @@ import (
 
 	"math/big"
 
-	pwn "github.com/7Rocky/pwntools"
+	pwn "github.com/7Rocky/gopwntools"
 )
 
 var (
